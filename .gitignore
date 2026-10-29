@@ -9,9 +9,8 @@ desktop.ini
 
 # 本地调试产物
 *.log
-_screenshot*.png
-_shot*.png
-_og.html
+_*.png
+_*.html
 node_modules/
 
 # 说明：assets/vendor/html2canvas.min.js 是运行时依赖，必须提交，不要忽略
