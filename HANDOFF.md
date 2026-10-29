@@ -139,6 +139,12 @@ cd "D:/AppData/wrobuddy-cunchu/杂/x-post-studio"
 git add -A && git commit -m "说明改了什么" && git push
 ```
 
+**如果 push 报 `CONNECT tunnel failed, response 502`**：这台机器的环境变量里有一个本地代理（`http://127.0.0.1:65011`），它偶尔会拒绝 git 的 CONNECT 请求，但 GitHub 直连是通的。绕过代理即可：
+
+```bash
+env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY git push origin main
+```
+
 Pages 会自动重建，约 1 分钟生效。查状态：`https://github.com/Yuki-happyday/x-post-studio/deployments`。
 
 `index.html` 里的 `og:image` 已是正式域名 `https://yuki-happyday.github.io/x-post-studio/assets/og-cover.png`，**换域名时必须同步改这两处**，否则分享出去没有缩略图。
