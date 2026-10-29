@@ -13,4 +13,7 @@ _*.png
 _*.html
 node_modules/
 
+# 本地交接文档，只在本地保存，不推送到公开仓库
+HANDOFF.md
+
 # 说明：assets/vendor/html2canvas.min.js 是运行时依赖，必须提交，不要忽略
